@@ -21,6 +21,9 @@ class Ball {
         int x;
         int y;
 
+        // pause delay (iterations without movement)
+        int pause_delay;
+
         // Ball movement
         int dx;  // Movement in pixels over the x-axis for
                  // the next frame (speed on the x-axis).

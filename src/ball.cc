@@ -16,7 +16,7 @@ namespace {
 }
 
 // Ball dimensions.
-const int Ball::LENGTH = 10;
+const int Ball::LENGTH = 9;
 
 Ball::Ball(int x, int y) {
     // Ball status.
@@ -35,6 +35,7 @@ Ball::Ball(int x, int y) {
     angle = 0.0f;
     hits = 0;
     predicted_y = 0;
+    pause_delay = 0;
 }
 
 void Ball::launch_ball(Paddle *ai_paddle) {
@@ -115,4 +116,6 @@ void Ball::reset() {
     // Speed and hit counter are reset to their initial positions.
     speed = 8;
     hits = 0;
+
+    pause_delay = 0; // reset pause mode
 }

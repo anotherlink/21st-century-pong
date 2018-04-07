@@ -6,6 +6,8 @@
 #include <SDL2/SDL.h>                       // SDL library.
 #include <SDL2/SDL_ttf.h>                   // SDL font library.
 #include <SDL2/SDL_mixer.h>                 // SDL sound library.
+#include <SDL2/SDL_hints.h>
+#include <SDL2/SDL_mouse.h>
 
 #include <string>
 
@@ -39,6 +41,12 @@ class Pong {
     SDL_Joystick *gamepad;  // Holds joystick information.
     int gamepad_direction;  // gamepad direction.
     int mouse_x, mouse_y;  // Mouse coordinates.
+
+    // Screen Dimensions / Position
+    int win_top;
+    int win_left;
+    int win_width;
+    int win_height;
 
     // Fonts.
 
@@ -77,9 +85,8 @@ class Pong {
     bool exit;  // True when player wants to exit game.
 
  public:
-    // Screen resolution.
-    static const int SCREEN_WIDTH;
-    static const int SCREEN_HEIGHT;
+    static int SCREEN_WIDTH;
+    static int SCREEN_HEIGHT;
 
     Pong(int argc, char *argv[]);
     ~Pong();

@@ -1,9 +1,13 @@
-Pong clone
-=============
+pong game clone for linux / nailara agent child
+===============================================
 
-Pong clone for Linux written in C++ with SDL 2.0.
+Pong game clone for Linux written in C++ with SDL 2.0
+    by [Chafic Najjar](https://github.com/chaficnajjar).
 
-![Screenshot](https://cloud.githubusercontent.com/assets/1498164/5608125/295a3186-9481-11e4-968b-04987a925a93.png)
+[ cloned and modified to work as nailara layout tile agent child
+  by [photon@nailara.net](https://github.com/anotherlink) (2018-03-07) ]
+
+![Screenshot](http://mirror.nailara.net/screenshots/pong-game.png)
 
 ## Dependencies
 
@@ -13,33 +17,37 @@ You will need:
 + [SDL Mixer 2.0](http://www.libsdl.org/projects/SDL_mixer/)
 + [SDL TTF 2.0](https://www.libsdl.org/projects/SDL_ttf/)
 
-### Ubuntu
+### Ubuntu / Debian
 
-Install all dependencies on Ubuntu 14.04 and above:
+Installing dependencies on Ubuntu or Debian-style distributions:
 
 `sudo apt-get install libsdl2-dev libsdl2-mixer-dev libsdl2-ttf-dev`
 
-## Get Source and Build
+## Getting the Source and Building the Game Binary
 
 ```
-git clone https://github.com/chaficnajjar/pong.git
-cd pong
+git clone https://github.com/anotherlink/pong-game.git
+cd pong-game
 make
 ```
 
-## Run the game
+## Running the Game
 
-To run the game:
+To run the game you need to supply its window dimensions as follows:
 
-`./pong`
+`./pong <X> <Y> <W> <H>`
 
 To run the game with joystick support:
 
-`./pong joystick`
+`./pong <X> <Y> <W> <H> joystick`
 
-## Contribute
+to start playing press the left mouse or joystick button (labeled 'OK' in game).
 
-If you would like to contribute, please make sure you follow the [Google C++ Style Guide](http://google-styleguide.googlecode.com/svn/trunk/cppguide.html).
+It will go into fullscreen mode as soon as you start the game and print game
+events to STDOUT. To exit the game press ESC. to return from fullscreen back to
+'tile' (window) mode press the button again while the game is running.
+It will then exit fullscreen and reset the game score once the round is over.
+
 
 ## License and Credits
 
@@ -69,5 +77,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
 Created by [Chafic Najjar](https://github.com/chaficnajjar).
+Modified for the [nailara project](https://github.com/anotherlink/nailara)
+                    by [photon](https://github.com/anotherlink).
 
 NES Chimera Font by [Brian Kramer](https://www.pkeod.com/).
